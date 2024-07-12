@@ -1,0 +1,116 @@
+:root {
+    --color-primary-500: hsl(158, 36%, 39%);
+    --color-primary-700:  hsl(158, 36%, 20%);
+    --color-secondary-200: hsl(30, 38%, 92%);
+
+    --color-neutral-900: hsl(212, 21%, 14%);
+    --color-neutral-400: hsl(228, 12%, 48%);
+    --color-neutral-100: hsl(0, 0%, 100%);
+
+    --font-family-regular: "Montserrat";
+    --font-family-accent: "Fraunces";
+
+    --font-size-200: 0.75rem;
+    --font-size-300: 0.875rem;
+    --font-size-700: 2rem;
+
+    --font-weight-regular: 500;
+    --font-weight-bold: 700;
+}
+
+/* General styles */
+
+body {
+    font-family: var(--font-family-regular);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-300);
+    color: var(--color-neutral-400);
+    background-color: var(--color-secondary-200);
+
+    display: grid;
+    place-content: center;
+}
+
+h1 {
+    line-height: 1;
+}
+
+/* Utility styles */
+
+.flex-group {
+    display: flex;
+    gap: 1rem;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.button {
+    cursor: pointer;
+    background-color: var(--color-primary-500);
+    color: var(--color-neutral-100);
+    border-radius: 0.5em;
+    border: 0;
+    padding: 0.75em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.button:is(:hover, :focus) {
+    background-color: var(--color-primary-700);
+}
+
+.visually-hidden {
+    left: -100vh;
+    position: absolute;
+}
+
+/* Product styles */
+
+.product {
+    --content-padding: 1.5rem;
+    --content-gap: 1rem;
+
+    background-color: var(--color-neutral-100);
+    border-radius: 0.75em;
+    overflow: hidden;
+    margin: 1rem;
+
+    display: grid;
+    max-width: 600px;
+}
+
+/* Switch to 2 columns at certain size. */
+@media (min-width: 600px) {
+    .product {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.product__content {
+    padding: var(--content-padding);
+    display: grid;
+    gap: var(--content-gap);
+}
+
+.product__category {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-size: var(--font-size-200);
+}
+
+.product__title {
+    color: var(--color-neutral-900);
+    font-family: var(--font-family-accent);
+    font-size: var(--font-size-700);
+}
+
+.product__price {
+    color: var(--color-primary-500);
+    font-size: var(--font-size-700);
+    font-family: var(--font-family-accent);
+    font-weight: var(--font-weight-regular);
+}
