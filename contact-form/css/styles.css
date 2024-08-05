@@ -79,6 +79,10 @@ textarea.form-input {
     cursor: pointer;
 }
 
+.radio-checked {
+    background: var(--clr-bg-green);
+}
+
 fieldset {
     border: 0;
     padding-top: var(--label-gap);
