@@ -25,36 +25,36 @@
       <div class="inputs-list">
         <div class="labeled-input">
           <label for="firstname-input">First Name *</label>
-          <input id="firstname-input" class="form-input" type="text" />
+          <input id="firstname-input" class="form-input" type="text" required />
         </div>
         <div class="labeled-input">
           <label for="lastname-input">Last Name *</label>
-          <input id="lastname-input" class="form-input" type="text" />
+          <input id="lastname-input" class="form-input" type="text" required />
         </div>
       </div>
 
       <div class="labeled-input">
         <label for="email-input">Email Address *</label>
-        <input id="email-input" class="form-input" type="email" />
+        <input id="email-input" class="form-input" type="email" required />
       </div>
 
       <fieldset>
         <legend>Query Type *</legend>
         <ul class="inputs-list">
           <li class="form-input labeled-input-inline radio">
-            <input name="query-type" type="radio" />
-            <p>General Inquiry</p>
+            <input id="general-inquiry-radio" name="query-type" type="radio" checked />
+            <label for="general-inquiry-radio">General Inquiry</label>
           </li>
           <li class="form-input labeled-input-inline radio">
-            <input name="query-type" type="radio" />
-            <p>Support Request</p>
+            <input id="support-request-radio" name="query-type" type="radio" />
+            <label for="support-request-radio">Support Request</label>
           </li>
         </ul>
       </fieldset>
 
       <div class="labeled-input">
         <label for="message-input">Message *</label>
-        <textarea id="message-input" class="form-input" rows="5"></textarea>
+        <textarea id="message-input" class="form-input" rows="5" required></textarea>
       </div>
 
       <div id="contact-agreement" class="labeled-input-inline">

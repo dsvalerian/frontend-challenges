@@ -48,7 +48,7 @@ form {
     height: 3rem;
     border-radius: 0.5rem;
     border: 1px solid var(--clr-neutral-300);
-    padding: 0rem 0.5rem;
+    padding: 0 0.5rem;
 }
 
 input[type="submit"] {
@@ -71,7 +71,7 @@ textarea.form-input {
 }
 
 .radio {
-    padding: 0rem 1.5rem;
+    padding: 0 1.5rem;
     font-size: var(--fs-500);
 }
 
