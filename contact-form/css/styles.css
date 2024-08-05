@@ -1,10 +1,14 @@
 :root {
+    --clr-accent-green: #0c7d69;
+
     --clr-bg-green: #e0f1e7;
     --clr-bg-white: #ffffff;
 
     --clr-neutral-700: #363e3e;
+    --clr-neutral-300: #929b9e;
 
     --fs-400: .9rem;
+    --fs-500: 1rem;
 
     --fw-normal: 500;
 }
@@ -18,28 +22,72 @@ body {
 }
 
 form {
+    --element-gap: 1rem;
+    --label-gap: 0.5rem;
+
     background: var(--clr-bg-white);
     margin: 2rem 1rem;
-    border-radius: 15px;
-    padding: 1rem;
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+
+    display: grid;
+    gap: var(--element-gap);
 }
 
-.input-field {
-    border-radius: 5px;
-    border: 1px solid var(--clr-neutral-700);
-    padding: 10px;
-    width: 100%;
+.labeled-input {
+    display: grid;
+    gap: var(--label-gap);
+}
+
+.inputs-list {
+    display: grid;
+    gap: var(--element-gap);
 }
 
 .form-input {
-    margin-top: 1rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--clr-neutral-300);
+    padding: 0rem 0.5rem;
 }
 
-.form-input > label {
+input[type="submit"] {
+    border: none;
+    background: var(--clr-accent-green);
+    color: var(--clr-bg-white);
+}
+
+textarea.form-input {
+    height: 10rem;
+    resize: none;
+    padding: 0.5rem;
+}
+
+.labeled-input-inline {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap: 1rem;
+}
+
+.radio {
+    padding: 0rem 1.5rem;
+    font-size: var(--fs-500);
+}
+
+.radio:hover {
+    cursor: pointer;
+}
+
+fieldset {
+    border: 0;
+    padding-top: var(--label-gap);
+}
+
+#contact-agreement {
+    margin: 1.25rem 0;
+}
+
+li {
     display: block;
-    margin-bottom: 5px;
-}
-
-.inline-label > label {
-    display: inline;
 }

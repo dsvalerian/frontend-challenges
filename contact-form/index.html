@@ -22,38 +22,44 @@
     <form>
       <h1>Contact Us</h1>
 
-      <div class="form-inline-inputs">
-        <div class="form-input">
+      <div class="inputs-list">
+        <div class="labeled-input">
           <label for="firstname-input">First Name *</label>
-          <input id="firstname-input" class="input-field" type="text" />
+          <input id="firstname-input" class="form-input" type="text" />
         </div>
-        <div class="form-input">
+        <div class="labeled-input">
           <label for="lastname-input">Last Name *</label>
-          <input id="lastname-input" class="input-field" type="text" />
+          <input id="lastname-input" class="form-input" type="text" />
         </div>
       </div>
 
-      <div class="form-input">
+      <div class="labeled-input">
         <label for="email-input">Email Address *</label>
-        <input id="email-input" class="input-field" type="email" />
+        <input id="email-input" class="form-input" type="email" />
       </div>
 
-      <fieldset class="form-input">
+      <fieldset>
         <legend>Query Type *</legend>
-        <ul>
-          <li><input class="input-field" name="query-type" type="radio" />General Enquiry</li>
-          <li><input class="input-field" name="query-type" type="radio" />Support Request</li>
+        <ul class="inputs-list">
+          <li class="form-input labeled-input-inline radio">
+            <input name="query-type" type="radio" />
+            <p>General Inquiry</p>
+          </li>
+          <li class="form-input labeled-input-inline radio">
+            <input name="query-type" type="radio" />
+            <p>Support Request</p>
+          </li>
         </ul>
       </fieldset>
 
-      <div class="form-input">
+      <div class="labeled-input">
         <label for="message-input">Message *</label>
-        <textarea id="message-input" class="input-field" rows="5"></textarea>
+        <textarea id="message-input" class="form-input" rows="5"></textarea>
       </div>
 
-      <div class="form-input form-agreement inline-label">
-        <input id="contact-agreement" type="checkbox" />
-        <label for="contact-agreement">I consent to being contacted by the team *</label>
+      <div id="contact-agreement" class="labeled-input-inline">
+        <input id="contact-agreement-checkbox" type="checkbox" />
+        <label for="contact-agreement-checkbox">I consent to being contacted by the team *</label>
       </div>
 
       <input class="form-input" type="submit" />
