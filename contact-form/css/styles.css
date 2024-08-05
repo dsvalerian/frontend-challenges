@@ -1,0 +1,45 @@
+:root {
+    --clr-bg-green: #e0f1e7;
+    --clr-bg-white: #ffffff;
+
+    --clr-neutral-700: #363e3e;
+
+    --fs-400: .9rem;
+
+    --fw-normal: 500;
+}
+
+body {
+    background: var(--clr-bg-green);
+    font-family: Karla, sans-serif;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-normal);
+    color: var(--clr-neutral-700);
+}
+
+form {
+    background: var(--clr-bg-white);
+    margin: 2rem 1rem;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.input-field {
+    border-radius: 5px;
+    border: 1px solid var(--clr-neutral-700);
+    padding: 10px;
+    width: 100%;
+}
+
+.form-input {
+    margin-top: 1rem;
+}
+
+.form-input > label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.inline-label > label {
+    display: inline;
+}

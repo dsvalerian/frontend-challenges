@@ -8,45 +8,56 @@
   
   <title>Frontend Mentor | Contact form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+  <!-- Style imports -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <main>
+    <form>
+      <h1>Contact Us</h1>
 
-  Contact Us
+      <div class="form-inline-inputs">
+        <div class="form-input">
+          <label for="firstname-input">First Name *</label>
+          <input id="firstname-input" class="input-field" type="text" />
+        </div>
+        <div class="form-input">
+          <label for="lastname-input">Last Name *</label>
+          <input id="lastname-input" class="input-field" type="text" />
+        </div>
+      </div>
 
-  First Name
-  This field is required
+      <div class="form-input">
+        <label for="email-input">Email Address *</label>
+        <input id="email-input" class="input-field" type="email" />
+      </div>
 
-  Last Name
-  This field is required
+      <fieldset class="form-input">
+        <legend>Query Type *</legend>
+        <ul>
+          <li><input class="input-field" name="query-type" type="radio" />General Enquiry</li>
+          <li><input class="input-field" name="query-type" type="radio" />Support Request</li>
+        </ul>
+      </fieldset>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+      <div class="form-input">
+        <label for="message-input">Message *</label>
+        <textarea id="message-input" class="input-field" rows="5"></textarea>
+      </div>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+      <div class="form-input form-agreement inline-label">
+        <input id="contact-agreement" type="checkbox" />
+        <label for="contact-agreement">I consent to being contacted by the team *</label>
+      </div>
 
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <input class="form-input" type="submit" />
+    </form>
+  </main>
 </body>
 </html>
